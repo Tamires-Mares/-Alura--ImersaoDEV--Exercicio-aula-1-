@@ -1,0 +1,32 @@
+//Exercicios feitos com auxilio da Alura 
+function calcularMedia() {
+  //Importa os valores do HTML
+  var valor1Letra = document.getElementById("nota1").value;
+  var valor2Letra = document.getElementById("nota2").value;
+  var valor3Letra = document.getElementById("nota3").value;
+  var valor4Letra = document.getElementById("nota4").value;
+  //Transforma as strings em float
+  var valor1 = parseFloat(valor1Letra);
+  var valor2 = parseFloat(valor2Letra);
+  var valor3 = parseFloat(valor3Letra);
+  var valor4 = parseFloat(valor3Letra);
+  //Soma as medias
+  media = (valor1 + valor2 + valor3 + valor4) / 4;
+  console.log(media);
+  //Coloca la no HTML a media para ser impressa na tela
+  //Pega o valor no HTML
+  var calculoMediaHTML = document.getElementById("calculodaMedia");
+
+  var calculoMediaJs = "O resultado da média é igual a " + media;
+
+  calculodaMedia.innerHTML = calculoMediaJs;
+  var resultado = document.getElementById("resultado");
+
+  if (media >= 6) {
+    var aprovado = "Parabéns!Aluno aprovado!";
+    resultado.innerHTML = aprovado;
+  } else {
+    var reprovado = "Que pena!Aluno reprovado!";
+    resultado.innerHTML = reprovado;
+  }
+}
